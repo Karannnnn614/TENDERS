@@ -17,7 +17,8 @@ export var save=async(req,res,next)=>{
   }
   catch(e){
    //console.log(e.errors._id.properties.message);
-   //console.log(e.errors.email.properties.message);  
+   //console.log(e.errors.email.properties.message);
+     
    res.status(500).json({"response":false,"error":e});   
   }
  };
