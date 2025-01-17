@@ -6,17 +6,17 @@ async function connectToDB() {
 
   console.log("Connecting to:", dbURI);
 
-  mongoose
-    .connect(dbURI, {
-      // useNewUrlParser: true,
-      // useUnifiedTopology: true,
-    })
-    .then(() => {
-      console.log("Connected to MongoDB at:", dbURI);
-    })
-    .catch((err) => {
-      console.error("Error connecting to MongoDB:", err.message);
+  try {
+    await mongoose.connect(dbURI, {
+      useNewUrlParser: true, // Optional but recommended
+      useUnifiedTopology: true, // Optional but recommended
     });
+    console.log("Connected to MongoDB at:", dbURI);
+    return true; // Success case
+  } catch (err) {
+    console.error("Error connecting to MongoDB:", err.message);
+    throw err; // Propagate the error to the caller
+  }
 }
 
 export default connectToDB;
