@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --exec babel-node"
+    "start": "nodemon app.js",
+    "dev": "nodemon --exec babel-node",
+    "build": "babel src --out-dir lib"
   },
   "keywords": [],
   "author": "stackbatch910",

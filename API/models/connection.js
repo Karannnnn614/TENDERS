@@ -1,4 +1,15 @@
-import mongoose from 'mongoose';
-const url="mongodb://localhost:27017/Tender_Backend";
-mongoose.connect(url);
-console.log("Successfully connected to mongodb database...");
+
+import mongoose from "mongoose";
+
+async function connectToDB() {
+  mongoose
+    .connect(
+      process.env.MONGO_URI || "mongodb://localhost:27017/Tender_Backend",
+      {
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
+      }
+    )
+}
+
+export default connectToDB;

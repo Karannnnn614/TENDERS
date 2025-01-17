@@ -1,8 +1,10 @@
 import url from 'url';
 import jwt from 'jsonwebtoken';
 import rs from 'randomstring';
-import '../models/connection.js';
+// import '../models/connection.js';
+
 import UserSchemaModel from '../models/user.model.js';
+
 export var save=async(req,res,next)=>{
   var userList=await UserSchemaModel.find();
   var l=userList.length;
