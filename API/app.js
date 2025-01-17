@@ -27,11 +27,10 @@ app.get("/", (req, res) => {
 
 connectToDB()
   .then(() => {
-    console.log("Connected to MongoDB");
     app.listen(process.env.PORT || 3001)
-    console.log(`Server invoked at link http://localhost:${process.env.PORT}`);
+    console.log(`Server invoked`);
   })
   .catch((error) => {
-    console.error("Error connecting to MongoDB:", error);
+    console.error("Sever could not be invoked", error);
     process.exit(1); // Exit the process with failure
   });
