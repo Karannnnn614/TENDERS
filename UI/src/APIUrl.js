@@ -1,7 +1,7 @@
-export const _userapiurl = "http://localhost:3001/user/";
+export const _userapiurl = `${process.env.TENDERS_SERVER_URI}user/`;
 
-export const _categoryapiurl = "http://localhost:3001/category/";
+export const _categoryapiurl = `${process.env.TENDERS_SERVER_URI}category/`;
 
-export const _subcategoryapiurl = "http://localhost:3001/subcategory/";
+export const _subcategoryapiurl = `${process.env.TENDERS_SERVER_URI}subcategory/`;
 
-export const _paymentapiurl="http://localhost:3001/payment";
+export const _paymentapiurl=`${process.env.TENDERS_SERVER_URI}payment`;
