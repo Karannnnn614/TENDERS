@@ -1,0 +1,28 @@
+.long_section12{
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 20px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.heading_container{
+    /* background-color: red; */
+    width: 100%;
+}
+
+#login_form{
+    margin: 45px;
+}
+
+h1{
+    text-align: left;
+    font-weight: 800;
+
+}
+.form-group{
+    font-size: 19px;
+    text-align: left;
+}

@@ -1,0 +1,14 @@
+#register_form1{
+    margin: 0px 250px;
+    /* background-color: red; */
+    /* width: 80%; */
+}
+
+h1{
+    text-align: left;
+    font-weight: 800;
+    
+}
+.form-group{
+    font-size: 19px;
+}
