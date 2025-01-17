@@ -35,7 +35,7 @@ function Footer() {
         </>
       );
     }
-  });
+  },[]);
 
   return(
   <>

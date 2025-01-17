@@ -122,7 +122,7 @@ function Banner() {
         </>
       ); // Hide banner for logged-in users (admin or regular user)
     }
-  });
+  },[]);
 
   return <>{BannerContent}</>;
 }

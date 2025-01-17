@@ -20,6 +20,7 @@ import Category from "./Components/Category/Category";
 import SubCategory from "./Components/SubCategory/SubCategory";
 
 function App() {
+  // console.log(process.env);
   return (
     <>
       <div id="root">
