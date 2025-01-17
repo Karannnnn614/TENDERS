@@ -1,8 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-
-
+import env from 'dotenv';
+env.config();
 var app = express();
 
 //to link routers
@@ -19,6 +19,9 @@ app.use(cors())
 //route level middleware to load routes as per base path
 app.use("/user",UserRouter);
 app.use("/category",CategoryRouter);
+app.get("/",(req,res)=>{
+    res.send("Welcome");
+})
 
-app.listen(3001);
+app.listen(process.env.PORT||3001);
 console.log("server invoked at link http://localhost:3001");
