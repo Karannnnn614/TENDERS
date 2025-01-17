@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 connectToDB()
   .then(() => {
     app.listen(process.env.PORT || 3001)
-    console.log(`Server invoked`);
+    console.log(`Server has been started`);
   })
   .catch((error) => {
     console.error("Sever could not be invoked", error);
