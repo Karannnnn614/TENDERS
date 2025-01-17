@@ -18,7 +18,7 @@ export var save=async(req,res,next)=>{
   catch(e){
    //console.log(e.errors._id.properties.message);
    //console.log(e.errors.email.properties.message);
-     
+
    res.status(500).json({"response":false,"error":e});   
   }
  };
@@ -48,6 +48,7 @@ export var save=async(req,res,next)=>{
   };
  
   export var update=async(req,res)=>{
+    // check karwau user details khudki bheji hai ki nhi or woh khudki change karwa sakta hai with help of user id
    let userDetails = await UserSchemaModel.findOne(req.body.condition_obj);
    if(userDetails){
        let user=await UserSchemaModel.updateMany(req.body.condition_obj,{$set: req.body.content_obj});   
@@ -62,7 +63,7 @@ export var save=async(req,res,next)=>{
  
  
  export var login=async(req,res,next)=>{
-  var userDetails={...req.body,"status":1};
+  var userDetails={...req.body};
   var user=await UserSchemaModel.findOne(userDetails);
   if(user)
   {
