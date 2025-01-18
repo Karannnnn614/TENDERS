@@ -13,7 +13,7 @@ function Auth() {
     if (
       ["/admin", "/manageusers", "/epadmin", "/cpadmin", "/addcategory", "/addsubcategory"].includes(path)
     ) {
-      if (!token || role !== "admin") {
+      if (!token || role !== "user") {
         navigate("/login");
       }
     } 

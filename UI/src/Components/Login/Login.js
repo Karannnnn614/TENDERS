@@ -27,10 +27,10 @@ function Login(){
         localStorage.setItem("city",user.city)
         localStorage.setItem("gender",user.gender)
         localStorage.setItem("info",user.info)
-        localStorage.setItem("role",user.role)
+        // localStorage.setItem("role",user.role)
         
         setOutput("successfully login")
-        user.role === "admin" ? navigate("/admin") : navigate("/user")
+        user.role === "user" ? navigate("/admin") : navigate("/user")
 
         }).catch((error)=>{
           setOutput("Invail User or Please verify your account... ")
